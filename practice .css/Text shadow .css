@@ -1,0 +1,221 @@
+/* h1:nth-child(1){
+    text-shadow: -2px -2px;
+}
+
+h1:nth-child(2){
+    text-shadow: 2px 2px red;
+}
+
+h1:nth-child(3){
+    text-shadow: 2px 2px 5px red;
+    text-shadow: 0 0 5px red;
+}
+
+/* h1:nth-child(4){
+    text-shadow: 2px 2px 4px red, -2px -2px 4px green;
+} */ 
+
+
+/* .box{
+    width: 400px;
+    height: 400px;
+    background-color: rebeccapurple;
+    box-shadow: 20px 20px 25px green;
+    box-shadow: 0 0 25px green;
+    box-shadow: 0 0 25px green, 10px 10px 20px blue;
+    box-shadow: 0 0 25px green inset, 10px 10px 20px blue inset;
+} */
+
+/* .card{
+    width: 250px;
+    box-shadow: 0 0 10px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header{
+    background-color: blue;
+    color: aliceblue;
+    padding: 10px;
+    font-size: 40px;
+
+}
+
+.text{
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+#card{
+    width: 250px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+}
+
+#header img{
+    width: 100%;
+    height: auto;
+}
+
+#text{
+    padding: 10px;
+    font-size: 20px;
+
+} */
+
+
+/* p{
+    white-space: nowrap;
+    overflow: hidden;
+    width: 200px;
+    border: 2px solid black;
+    text-overflow: ellipsis;
+} */
+
+/* p{
+    
+    overflow: hidden;
+    width: 200px;
+    border: 2px solid black;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.head1{
+    writing-mode: horizontal-tb;
+}
+
+.head2{
+    writing-mode: vertical-rl;
+} */
+
+/* .transform{
+    height: 400px;
+    width: 300px;
+    border: 5px solid green;
+    transform: translateX(20px );
+    transform: rotate(40deg);
+    transform: calc(3);
+
+    transform: matrix(1, -0.3, 0, 1, 0, 0);
+    transform: rotatez(150deg);
+} */
+
+/* div{
+    height: 100px;
+    width: 100px;
+    margin-bottom: 30px;
+    background-color: blue;
+    transition-property: width;
+    transition-duration: 2s;
+
+    transition: width 2s, height 4s;
+}
+
+.div1{
+ transition-timing-function: linear;
+}
+.div2{
+ transition-timing-function: ease;
+}
+.div3{
+ transition-timing-function: ease-in;
+}
+.div4{
+ transition-timing-function: ease-out;
+}
+.div5{
+ transition-timing-function: ease-in-out;
+}
+
+div:hover{
+    width: 300px;
+} */
+
+
+/* animation */
+.div7{
+    margin-top: 200px;
+    width: 100px;
+    height: 100px;
+    background-color: brown;
+    position: absolute;
+    /* animation-name: demo;
+    animation-duration: 4s;
+    /* animation-iteration-count: 5; */
+    /*animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear ; */
+
+    animation: demo 5s linear 2s infinite;
+    
+}
+
+@keyframes demo{
+ /* form{
+    background-color: brown;
+ }
+ to{
+    background-color: green;
+ } */
+
+ 0%{
+    background-color: brown;
+    left: 0px;
+    top: 0px;
+
+ }
+ 25%{
+    background-color: bisque;
+    left: 200px;
+    top: 0px;
+ }
+ 50%{
+    background-color: blue;
+    left: 200px;
+    top: 200px;
+ }
+
+ 75%{
+    background-color: black;
+    left: 0px;
+    top: 200px;
+ }
+
+  100%{
+    background-color: chartreuse;
+    left: 0px;
+    top: 0px;
+  }
+}
+
+body{
+    text-align: center;
+}
+.tooltip{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted red;
+}
+
+.tooltip .tooltip1{
+    visibility: hidden;
+    width: 180px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 6px;
+
+    position: absolute;
+    z-index: 1;
+    top: 100%;
+    left: 50%;
+    margin-left: -90px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.tooltip:hover  .tooltip1{
+    visibility: visible;
+    opacity: 1;
+}

@@ -1,0 +1,79 @@
+body{
+    background-color: #333;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    
+}
+li{
+    display: inline-block;
+    background-color: #ea3f3f;
+}
+
+li a{
+    display: block;
+    color: rgb(13, 25, 37);
+    text-align: center;
+    padding: 14px 14px;
+    text-decoration: none;
+}
+
+li a:hover{
+    background-color: #fc0000;
+}
+.active{
+    background-color: #04aa6d;
+}
+
+.drop{
+display: inline-block;
+position: relative;
+}
+ul a{
+    color: blue;
+}
+
+.drop2{
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.drop2{
+    display: none;
+    position: absolute;
+    z-index: 2;
+    padding: 16px;
+}
+
+.drop:hover .drop2{
+ display: block;
+ 
+}
+
+.drop2 a{
+    display: block;
+    color: rgb(6, 5, 5);
+    text-align: center;
+    text-decoration: none;
+    background-color: antiquewhite;
+}
+.drop2 a:hover{
+background-color: #ea3f3f;
+/* margin-top: 50px; */
+}
+button{
+    background: #04aa6d;
+    border-radius: 5px;
+    border: 30px;
+    padding: 10px;
+}
+button:hover{
+    border-radius: 5px;
+} 

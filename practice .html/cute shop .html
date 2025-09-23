@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Size Based Slider</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #111;
+      font-family: sans-serif;
+    }
+
+    .slider {
+      position: relative;
+      width: 100%;
+      max-width: 1200px; /* চাইলে সাইটের লিমিট দিতে পারো */
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      min-width: 100%;
+    }
+
+    .slide img {
+      width: 100%;
+      height: auto; /* ছবির আসল অনুপাত ধরে রাখবে */
+      display: block;
+    }
+
+    /* Navigation Buttons */
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: #fff;
+      background: rgba(0,0,0,0.5);
+      border: none;
+      cursor: pointer;
+      padding: 5px 20px;
+      z-index: 10;
+    }
+
+    .prev { left: -1210px; }
+    .next { right: -1210px; }
+
+    /* Dots */
+    .dots {
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 8px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #aaa;
+      cursor: pointer;
+      margin-bottom: -20px;
+    }
+
+    .dot.active {
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="slider">
+      
+    <div class="slides">
+        
+      <div class="slide"><img src="https://cuteshopbd.com/wp-content/uploads/2025/09/IMG-20250913-WA0015.jpg" alt="Slide 1"></div>
+      
+      <div class="slide"><img src="https://cuteshopbd.com/wp-content/uploads/2025/09/Blue-and-White-Shop-New-Collection-Sale-Page-Facebook-Cover_20250910_123909_০০০০.webp" alt="Slide 2"></div>
+      
+      <div class="slide"><img src="https://cuteshopbd.com/wp-content/uploads/2025/09/IMG-20250913-WA0012.webp" alt="Slide 3"></div>
+      
+      
+      <div class="slide"><img src="https://cuteshopbd.com/wp-content/uploads/2025/09/IMG-20250913-WA0013.webp" alt="Slide 4"></div>
+    </div>
+    
+    <button class="nav-btn prev">&#10094;</button>
+    <button class="nav-btn next">&#10095;</button>
+    <div class="dots"></div>
+  </div>
+
+  <script>
+    const slides = document.querySelector('.slides');
+    const slideCount = document.querySelectorAll('.slide').length;
+    const prevBtn = document.querySelector('.prev');
+    const nextBtn = document.querySelector('.next');
+    const dotsContainer = document.querySelector('.dots');
+    let index = 0;
+
+    // Create dots
+    for (let i = 0; i < slideCount; i++) {
+      const dot = document.createElement('div');
+      dot.classList.add('dot');
+      if (i === 0) dot.classList.add('active');
+      dot.addEventListener('click', () => moveToSlide(i));
+      dotsContainer.appendChild(dot);
+    }
+
+    const dots = document.querySelectorAll('.dot');
+
+    function updateDots() {
+      dots.forEach(dot => dot.classList.remove('active'));
+      dots[index].classList.add('active');
+    }
+
+    function moveToSlide(i) {
+      index = i;
+      slides.style.transform = `translateX(-${index * 100}%)`;
+      updateDots();
+    }
+
+    function nextSlide() {
+      index = (index + 1) % slideCount;
+      moveToSlide(index);
+    }
+
+    function prevSlide() {
+      index = (index - 1 + slideCount) % slideCount;
+      moveToSlide(index);
+    }
+
+    nextBtn.addEventListener('click', nextSlide);
+    prevBtn.addEventListener('click', prevSlide);
+
+    // Auto slide
+    setInterval(nextSlide, 4000);
+  </script>
+
+</body>
+</html>

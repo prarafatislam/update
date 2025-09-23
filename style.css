@@ -1,0 +1,164 @@
+body{
+    margin: 29px;
+}
+
+#a1{
+    border-style: outset;
+    border-color: rgb(209, 106, 38);
+    text-align: center;
+    font-family: times new roman;
+    font-style: italic;
+    
+}
+#a2{
+    border: 2px solid red ;
+    background-color: aqua;
+    border-radius: 25px;
+    padding: 35px 20px 10px 25px;
+    font-family: serif;
+    font-family: times new roman;
+    font-style: italic;
+    font-weight: bold;
+    font-size: 25px;
+
+}
+#p1{
+    background-color: rgb(3, 247, 247);
+    border-style: solid;
+    border-width: 5px;
+    border-radius: 30px;
+    text-align: center;
+    font-family: serif;
+    
+
+}
+.p2{
+    
+    background-color: rgb(253, 253, 11);
+    border-top-style: solid;
+    border-bottom-style: dotted;
+    border-right-style: dashed;
+    border-left-style: inset;
+
+    border-top-color: blue;
+    border-top-width: 5px;
+    border-top-left-radius: 25px;
+}
+
+/*group */
+h3, h2{
+    color: blanchedalmond;
+    background-color: rgb(159, 181, 181);
+    text-align: center;
+}
+
+.c1{
+    border-top-style: solid;
+    border-bottom-style: dotted;
+    border-right-style: inset;
+    border-left-style: dashed;
+
+    border-top-color: red;
+    border-right-width: 5px;
+    border-top-left-radius: 25px;
+    padding-left: 15px;
+}
+
+#p3{
+    border: 2px solid rgb(0, 249, 0);
+    background-color: bisque;
+    margin-right: auto;
+    margin: auto;
+    width: 500px;
+    
+}
+
+#p3{
+    border: 2px solid rgb(0, 249, 0);
+    background-color: blueviolet;
+}
+
+a:link{
+    color: rgb(240, 7, 88);
+    text-decoration: none;
+    padding-left: 35px;
+    padding-right: 25px;
+    border: 5px solid;
+    background-color: brown;
+    
+
+}
+
+a:hover{
+    color: blue;
+    text-decoration: underline;
+}
+a:active{
+    color: aqua;
+    text-decoration: none;
+}
+a:visited{
+    color: black;
+}
+.tablevid{
+    overflow-x: auto;
+}
+
+#code1{
+    font-family: Arial, Helvetica, sans-serif ;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+#code1 td, #code1 th{
+ border: 1px solid #ddd;
+ padding: 8px;
+ text-align: center;
+ vertical-align: bottom;
+}
+
+
+
+#code1 th{
+    background-color: #04AA60;
+    text-align: center;
+    color: red;
+
+}
+
+#code1 tr:nth-child(even){
+    background-color: #f2f2f2;
+}
+
+#code1 tr:hover{background-color: #ddd;}
+
+.parent {
+    position: relative;
+}
+
+.child-one {
+     
+}
+
+.child-two{
+ position: fixed;
+}
+
+.child-thre {
+
+}
+
+
+
+.green {
+height: 400px;
+width: 600px;
+background-color: green;
+}
+
+.red {
+height: 400px;
+width: 400px;
+background-color: red;
+}
